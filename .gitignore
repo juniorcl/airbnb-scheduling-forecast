@@ -155,7 +155,7 @@ cython_debug/
 # End of https://www.toptal.com/developers/gitignore/api/jupyternotebooks,python
 
 # Exclude data
-/data/raw/*
-/data/interim/*
-/data/processed/*
-/data/external/*
+/data/raw/*.csv
+/data/interim/*.csv
+/data/processed/*.csv
+/data/external/*.csv
