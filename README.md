@@ -70,37 +70,37 @@ Here are all the model implemented during the project. The results were gotten f
 
 | Accuracy | Precision | Recall | F1 | Kappa |
 |:---:|:---:|:---:|:---:|:---:|
-| 0.0833 +/- 0.0 | 0.0487 +/- 0.0 | 0.5848 +/- 0.0 | 0.0615 +/- 0.0 | 0.0 +/- 0.0 |
+| 0.0833 +/- 0.0 | 0.0239 +/- 0.0 | 0.0833 +/- 0.0 | 0.0371 +/- 0.0 | 0.0 +/- 0.0 |
 
 ### Logistic Regression
 
 | Accuracy | Precision | Recall | F1 | Kappa |
 |:---:|:---:|:---:|:---:|:---:|
-| 0.1816 +/- 0.0058 | 0.179 +/- 0.0085 | 0.6007 +/- 0.0035 | 0.1105 +/- 0.0035 | 0.3863 +/- 0.0044 |
+| 0.1996 +/- 0.0013 | 0.1765 +/- 0.0047 | 0.1996 +/- 0.0013 | 0.1374 +/- 0.0021 | 0.2495 +/- 0.0017 |
 
 ### Random Forest
 
 | Accuracy | Precision | Recall | F1 | Kappa |
 |:---:|:---:|:---:|:---:|:---:|
-| 0.1671 +/- 0.0002 | 0.1741 +/- 0.0047 | 0.8718 +/- 0.0005 | 0.1551 +/- 0.0005 | 0.762 +/- 0.0008 |
+| 0.8128 +/- 0.0028 | 0.9308 +/- 0.0013 | 0.8128 +/- 0.0028 | 0.8626 +/- 0.0021 | 0.841 +/- 0.0017 |
 
 ### Extra Trees
 
 | Accuracy | Precision | Recall | F1 | Kappa |
 |:---:|:---:|:---:|:---:|:---:|
-| 0.168 +/- 0.0006 | 0.1718 +/- 0.0028 | 0.8568 +/- 0.0005 | 0.162 +/- 0.0009 | 0.7374 +/- 0.0008 |
+| 0.8676 +/- 0.0007 | 0.9311 +/- 0.0012 | 0.8676 +/- 0.0007 | 0.8965 +/- 0.0005 | 0.881 +/- 0.0009 |
 
 ### Bagging + Logistic Regression
 
 | Accuracy | Precision | Recall | F1 | Kappa |
 |:---:|:---:|:---:|:---:|:---:|
-| 0.1834 +/- 0.0057 | 0.1691 +/- 0.0055 | 0.6012 +/- 0.0019 | 0.1127 +/- 0.0026 | 0.3873 +/- 0.0024 |
+| 0.2012 +/- 0.001 | 0.1749 +/- 0.003 | 0.2012 +/- 0.001 | 0.1384 +/- 0.002 | 0.2495 +/- 0.0014 |
 
 ### AdaBoost + Logistic Regression
 
 | Accuracy | Precision | Recall | F1 | Kappa |
 |:---:|:---:|:---:|:---:|:---:|
-| 0.1687 +/- 0.0031 | 0.1642 +/- 0.0077 | 0.5865 +/- 0.0008 | 0.0893 +/- 0.0007 | 0.371 +/- 0.0008 |
+| 0.1947 +/- 0.002 | 0.1802 +/- 0.0051 | 0.1947 +/- 0.002 | 0.1392 +/- 0.0012 | 0.2386 +/- 0.002 |
 
 ## 6.0 Machine Learning Performance
 
@@ -108,25 +108,24 @@ The choosed model was **Bagging + Logistic Regression** and it was tuned to impr
 
 | Accuracy | Precision | Recall | F1 | Kappa |
 |:---:|:---:|:---:|:---:|:---:|
-| 0.1878 +/- 0.0079 | 0.1717 +/- 0.0049 | 0.6043 +/- 0.0052 | 0.1151 +/- 0.0036 | 0.3916 +/- 0.0062 |
+| 0.1992 +/- 0.0009 | 0.1732 +/- 0.0071 | 0.1992 +/- 0.0009 | 0.1338 +/- 0.001 | 0.2447 +/- 0.0006 |
 
 ## 7.0 Business Results
 
-the accuracy of the model is very low. It shows that it can predict only 10% of the locations where the user will decide.
+The result shows that the accuracy of the model is very low.
+Furthermore, the train-valid results are very different from those cross validation results. It shows that it can predict only about 20% of the locations where the user will decide, and the model may be overfitted.
 
 ## 8.0 Conclusions
 
-The model does not have a good accuracy, being below 20%. One cause is high data imbalance. That is why in another cycle rebalancing algorithms must be used.
+The model doesn't have a good accuracy, being below 20%. And it may be overfitted. That is why in another cycle rebalancing algorithms must be used.
 
 ## 9.0 Lessons Learned
 
 * The importance of the data.
 
-* How to fiz the problem of the imbalanced data.
+* How to fix the problem of the imbalanced data.
 
 ## 10.0 Next Steps
-
-* Implementation of imbalanced algorithms.
 
 * Implementing new features through feature engineering.
 
