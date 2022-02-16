@@ -159,3 +159,6 @@ cython_debug/
 /data/interim/*.csv
 /data/processed/*.csv
 /data/external/*.csv
+
+# Exclude catboost infos
+/notebooks/catboost_info
