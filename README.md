@@ -32,7 +32,7 @@ Step 04. Exploratory Data Analysis: The exploratory data analysis section consis
 
 Step 05. Data Preparation: In this fifth section, the data will be prepared for machine learning modeling. Therefore, they will be transformed to improve the learning of the machine learning model, thus they can be encoded, oversampled, subsampled or rescaled.
 
-Step 06. Feature Selection: After the data preparation in this section algorithms, like Boruta, will select the best columns to be used for the training of the machine learning model. This reduces the dimensionality of the database and decreases the chances of overfiting.
+Step 06. Feature Selection: After the data preparation in this section algorithms, like PCA, will select the best columns to be used for the training of the machine learning model. This reduces the dimensionality of the database and decreases the chances of overfiting.
 
 Step 07. Machine Learning Modeling: Step 07 aims to train the machine learning algorithms and how they can predict the data. For validation the model is trained, validated and applied to cross validation to know the learning capacity of the model.
 
@@ -70,45 +70,39 @@ Here are all the model implemented during the project. The results were gotten f
 
 | Accuracy | Precision | Recall | F1 | Kappa |
 |:---:|:---:|:---:|:---:|:---:|
-| 0.0833 +/- 0.0 | 0.0239 +/- 0.0 | 0.0833 +/- 0.0 | 0.0371 +/- 0.0 | 0.0 +/- 0.0 |
+| 0.0833 +/- 0.0 | 0.0487 +/- 0.0 | 0.5848 +/- 0.0 | 0.0615 +/- 0.0 | 0.0 +/- 0.0 |
 
 ### Logistic Regression
 
 | Accuracy | Precision | Recall | F1 | Kappa |
 |:---:|:---:|:---:|:---:|:---:|
-| 0.1996 +/- 0.0013 | 0.1765 +/- 0.0047 | 0.1996 +/- 0.0013 | 0.1374 +/- 0.0021 | 0.2495 +/- 0.0017 |
+| 0.0998 +/- 0.0065 | 0.0239 +/- 0.0327 | 0.0078 +/- 0.001 | 0.0106 +/- 0.0006 | 0.0006 +/- 0.0026 |
 
 ### Random Forest
 
 | Accuracy | Precision | Recall | F1 | Kappa |
 |:---:|:---:|:---:|:---:|:---:|
-| 0.8128 +/- 0.0028 | 0.9308 +/- 0.0013 | 0.8128 +/- 0.0028 | 0.8626 +/- 0.0021 | 0.841 +/- 0.0017 |
+| 0.166 +/- 0.0007 | 0.1643 +/- 0.0022 | 0.8511 +/- 0.0017 | 0.16 +/- 0.0012 | 0.7281 +/- 0.0027 |
 
 ### Extra Trees
 
 | Accuracy | Precision | Recall | F1 | Kappa |
 |:---:|:---:|:---:|:---:|:---:|
-| 0.8676 +/- 0.0007 | 0.9311 +/- 0.0012 | 0.8676 +/- 0.0007 | 0.8965 +/- 0.0005 | 0.881 +/- 0.0009 |
+| 0.1659 +/- 0.0013 | 0.1656 +/- 0.0025 | 0.829 +/- 0.002 | 0.1641 +/- 0.0017 | 0.6928 +/- 0.0032 |
 
-### Bagging + Logistic Regression
-
-| Accuracy | Precision | Recall | F1 | Kappa |
-|:---:|:---:|:---:|:---:|:---:|
-| 0.2012 +/- 0.001 | 0.1749 +/- 0.003 | 0.2012 +/- 0.001 | 0.1384 +/- 0.002 | 0.2495 +/- 0.0014 |
-
-### AdaBoost + Logistic Regression
+### CatBoost
 
 | Accuracy | Precision | Recall | F1 | Kappa |
 |:---:|:---:|:---:|:---:|:---:|
-| 0.1947 +/- 0.002 | 0.1802 +/- 0.0051 | 0.1947 +/- 0.002 | 0.1392 +/- 0.0012 | 0.2386 +/- 0.002 |
+| 0.1748 +/- 0.004 | 0.1735 +/- 0.0029 | 0.6073 +/- 0.0031 | 0.1212 +/- 0.0025 | 0.395 +/- 0.0036 |
 
 ## 6.0 Machine Learning Performance
 
-The choosed model was **Bagging + Logistic Regression** and it was tuned to improve the parameters and scores. Below there's a table with the capacity of the model to learn.
+The choosed model was **CatBoost**. Below there's a table with the capacity of the model to learn.
 
 | Accuracy | Precision | Recall | F1 | Kappa |
 |:---:|:---:|:---:|:---:|:---:|
-| 0.1992 +/- 0.0009 | 0.1732 +/- 0.0071 | 0.1992 +/- 0.0009 | 0.1338 +/- 0.001 | 0.2447 +/- 0.0006 |
+| 0.1748 +/- 0.004 | 0.1735 +/- 0.0029 | 0.6073 +/- 0.0031 | 0.1212 +/- 0.0025 | 0.395 +/- 0.0036 |
 
 ## 7.0 Business Results
 
@@ -117,7 +111,7 @@ Furthermore, the train-valid results are very different from those cross validat
 
 ## 8.0 Conclusions
 
-The model doesn't have a good accuracy, being below 20%. And it may be overfitted. That is why in another cycle rebalancing algorithms must be used.
+The model doesn't have a good accuracy even using Principal Componentes Analysis (PCA) improve the features, being below 20%.
 
 ## 9.0 Lessons Learned
 
@@ -125,8 +119,10 @@ The model doesn't have a good accuracy, being below 20%. And it may be overfitte
 
 * How to fix the problem of the imbalanced data.
 
+* Improving the the features using PCA.
+
 ## 10.0 Next Steps
 
 * Implementing new features through feature engineering.
 
-* Implementation of Principal Component Analysis (PCA).
+* Select new variables and improve the class through business.
